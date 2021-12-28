@@ -1,0 +1,129 @@
+
+/* Partie Header */
+
+.flexTitre{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 60px;
+}
+
+/* Logo Header  */
+.flexTitre img{
+    width: 60px;
+   
+}
+
+/* Titre Header */
+.titre_logo h2{
+   color: #D04f4f;
+   font-size: 35px;
+   margin-left: -90px;
+   margin-top: 5px;
+   font-family: "DM Sans";
+  
+}
+
+/* Section Barre de recherche */
+
+.search_bar{
+    display: flex; 
+    justify-content: center;
+    position: relative;
+}
+
+.search_bar input {
+    width: 50%;
+    height: 50px;
+    background: #e7e7e7;
+    border: none;
+    border-radius: 5px;
+    text-indent: 20px;
+    
+    
+}
+
+/* icone de recherche */
+
+.search_bar .icone_searchbar{
+    position: absolute;  
+    font-size: 5px;
+    right: 26%;
+    top: 16%;
+
+}
+
+.search_bar .icone_searchbar img{
+    width: 30px;
+}
+
+/* Partie Boutton */
+
+.search_global{
+    display: flex;
+    margin-left: 475px;
+    margin-top: 30px;
+}
+
+.searchIngredients .target_ing {
+    width: 130px;
+    height: 50px;
+    background-color: #3282F7;
+    color: white;
+    border-radius: 5px;
+    background-image: url(./images/arrowDown.svg);
+    background-repeat: no-repeat;
+    background-position: right 15% bottom 50%;
+    font-family: "DM Sans";
+    outline: none;
+    padding-left: 20px;
+  
+    
+    
+}
+
+.searchAppareil .target_ing {
+    width: 130px;
+    height: 50px;
+    background-color: #3282F7;
+    color: white;
+    border-radius: 5px;
+    background-image: url(./images/arrowDown.svg);
+    background-repeat: no-repeat;
+    background-position: right 15% bottom 50%;
+    font-family: "DM Sans";
+    outline: none;
+    padding-left: 20px;
+    margin-left: 20px;
+    
+    
+}
+
+.searchUstensiles .target_ing {
+    width: 130px;
+    height: 50px;
+    background-color: #3282F7;
+    color: white;
+    border-radius: 5px;
+    background-image: url(./images/arrowDown.svg);
+    background-repeat: no-repeat;
+    background-position: right 15% bottom 50%;
+    font-family: "DM Sans";
+    outline: none;
+    padding-left: 20px;
+    margin-left: 20px;
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
