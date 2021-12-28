@@ -1,4 +1,7 @@
-
+/* Body */
+body{
+    height: 130vh;
+}
 /* Partie Header */
 
 .flexTitre{
@@ -123,11 +126,17 @@
 
 /* Partie Recette  */
 
+.flex_description{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
 .flex_description .bloc_recette{
     margin-top: 40px;
     margin-left: 50px;
-   width: 450px;
-   height: 350px;
+   width: 560px;
+   height: 380px;
    background: #E7E7E7;
 }
 
@@ -157,13 +166,27 @@
 
 /* Liste ingrédients */
 
-.flex_description .bloc_recette .liste_ingredients {
-    
- display: flex;
- flex-direction: column;
- margin-left: 20px;
-     
+.flex_description .bloc_recette .liste_ingredients{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 15px;
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
