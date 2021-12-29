@@ -69,14 +69,14 @@ body {
     width: 130px;
     height: 50px;
     background-color: #3282f7;
-    color: #ffff;
+    color: #fff;
+    border: none;
     font-size: 15px;
     border-radius: 5px;
     background-image: url(./images/arrowDown.svg);
     background-repeat: no-repeat;
     background-position: right 15% bottom 50%;
     font-family: "DM Sans";
-    outline: none;
     padding-left: 20px;
 }
 
