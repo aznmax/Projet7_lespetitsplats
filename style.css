@@ -80,6 +80,25 @@ body {
     padding-left: 20px;
 }
 
+.search_global .searchIngredients  .container_ingredient{
+    width: 480px;
+    height: 480px;
+    background: #3282f7;
+   
+}
+
+.searchIngredients .container_ingredient .arrowUp{
+    margin-left: 90%;
+    margin-top: 5%;;
+}
+
+.target_ing::placeholder{
+    color: #fff;
+    opacity: 1;
+}
+
+
+
 .searchAppareil .target_ing {
     width: 130px;
     height: 50px;
@@ -97,6 +116,21 @@ body {
     margin-left: 20px;
 }
 
+.search_global .searchAppareil  .container_appareil{
+    width: 480px;
+    height: 480px;
+    background: #68d9a4;
+    margin-left: 20px;
+ 
+}
+
+.searchAppareil .container_appareil .arrowUp{
+    margin-left: 90%;
+    margin-top: 5%;;
+}
+
+
+
 .searchUstensiles .target_ing {
     width: 130px;
     height: 50px;
@@ -113,6 +147,20 @@ body {
     margin-left: 20px;
     border: none;
 }
+
+ .searchUstensiles  .container_ustensile{
+    width: 480px;
+    height: 480px;
+    background: #ed6454;
+    margin-left: 15px;
+}
+
+.searchUstensiles .container_ustensile .arrowUp{
+    margin-left: 90%;
+    margin-top: 5%;;
+}
+
+
 
 /* Partie Recette  */
 
