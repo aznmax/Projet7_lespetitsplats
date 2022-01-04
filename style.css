@@ -1,6 +1,7 @@
 /* Body */
 body {
     height: 150vh;
+    font-family: 'Lato', sans-serif;
 }
 /* Partie Header */
 
@@ -87,25 +88,85 @@ body {
 
 
 .search_global .searchIngredients  .container_ingredient{
-    width: 900px;
-    height: 350px;
+    width: 600px;
+    height: 360px;
+    border-radius: 5px;
     background: #3282f7;
-    position: relative;  
+    position: relative; 
     display: none;
    
 }
 
+.search_global .container_ingredient .inp_ing{
+    width:95%;
+    border: none;
+    outline: none;
+    background: #3282f7;
+    margin-top: 20px;
+    text-align: left;
+    text-align: top;
+    text-indent: 25px;
+}
 
+.inp_ing::placeholder{
+    color: #fff;
+    opacity: 1;
+}
+
+
+/* Second input liste déroulante avec les ingrédients(liste li) / fleche fermeture menu */
+
+.container_ingredient .liste_gauche {
+    list-style-type: none;
+    color: #fff;
+    margin-top: 25px;
+}
+.container_ingredient .liste_gauche li {
+    margin-top: 8px;
+} 
 
 .searchIngredients .container_ingredient .arrowUp{
-    margin-left: 90%;
-    margin-top: 5%;;
+   margin-top: 0%;
+   margin-left: -20px;
+
+}
+/* Liste  Ingrédient Centre */
+.container_ingredient .liste_centre {
+    color: #fff;
+    list-style-type: none;
+    margin-top: 30px;
+    margin-left: 60px;
+}
+
+.container_ingredient .liste_centre li {
+    margin-top: 8px;
+} 
+/* Liste  Ingrédient droit */
+.container_ingredient .liste_droite {
+    color: #fff;
+    list-style-type: none;
+    margin-top: 30px;
+    margin-left: 60px;
+}
+
+.container_ingredient .liste_droite li {
+    margin-top: 8px;
+    margin-left: -10px;
+} 
+
+
+.container_ingredient .liste_total_ingredients{
+    display: flex;
+    
+    
 }
 
 .target_ing::placeholder{
     color: #fff;
     opacity: 1;
 }
+
+
 /* Input Appareil */
 
 .searchAppareil .target_ing {
@@ -165,9 +226,8 @@ body {
     height: 480px;
     background: #ed6454;
     margin-left: 15px;
-    position: absolute;
-    bottom: 0px;
     display: none;
+
 }
 
 .searchUstensiles .container_ustensile .arrowUp{
@@ -183,6 +243,8 @@ body {
     width: 100%;
     margin-top: 40px;
     justify-content: space-around;
+ 
+ 
 }
 
 .flex_description .bloc_recette {
@@ -192,6 +254,7 @@ body {
     height: 430px;
     border-radius: 15px;
     background: #e7e7e7;
+    
 }
 
 .flex_description .bloc_recette .image {
