@@ -1,7 +1,7 @@
 /* Body */
 body {
     height: 150vh;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
 }
 /* Partie Header */
 
@@ -64,6 +64,7 @@ body {
     justify-content: flex-start;
     margin-left: 114px;
     margin-top: 30px;
+    position: absolute;
 }
 
 /* Input Ingrédients */
@@ -81,24 +82,24 @@ body {
     background-position: right 15% bottom 50%;
     font-family: "DM Sans";
     padding-left: 20px;
+    
 }
 
+/* Container Ingrédient */
 
-
-
-
-.search_global .searchIngredients  .container_ingredient{
+.search_global .searchIngredients .container_ingredient {
     width: 600px;
     height: 360px;
     border-radius: 5px;
     background: #3282f7;
-    position: relative; 
     display: none;
-   
+    margin-left: -15px;
 }
 
-.search_global .container_ingredient .inp_ing{
-    width:95%;
+
+
+.search_global .container_ingredient .inp_ing {
+    width: 95%;
     border: none;
     outline: none;
     background: #3282f7;
@@ -108,14 +109,14 @@ body {
     text-indent: 25px;
 }
 
-.inp_ing::placeholder{
+.inp_ing::placeholder {
     color: #fff;
     opacity: 1;
 }
 
+/* Seconde input liste déroulante avec les ingrédients(liste li) / fleche fermeture menu */
 
-/* Second input liste déroulante avec les ingrédients(liste li) / fleche fermeture menu */
-
+/* Liste Ingrédient gauche */
 .container_ingredient .liste_gauche {
     list-style-type: none;
     color: #fff;
@@ -123,12 +124,11 @@ body {
 }
 .container_ingredient .liste_gauche li {
     margin-top: 8px;
-} 
+}
 
-.searchIngredients .container_ingredient .arrowUp{
-   margin-top: 0%;
-   margin-left: -20px;
-
+.searchIngredients .container_ingredient .arrowUp {
+    margin-top: 0%;
+    margin-left: -20px;
 }
 /* Liste  Ingrédient Centre */
 .container_ingredient .liste_centre {
@@ -140,7 +140,7 @@ body {
 
 .container_ingredient .liste_centre li {
     margin-top: 8px;
-} 
+}
 /* Liste  Ingrédient droit */
 .container_ingredient .liste_droite {
     color: #fff;
@@ -152,29 +152,25 @@ body {
 .container_ingredient .liste_droite li {
     margin-top: 8px;
     margin-left: -10px;
-} 
-
-
-.container_ingredient .liste_total_ingredients{
-    display: flex;
-    
-    
 }
 
-.target_ing::placeholder{
+.container_ingredient .liste_total_ingredients {
+    display: flex;
+}
+/* Changement couleur PlaceHolder */
+.target_ing::placeholder {
     color: #fff;
     opacity: 1;
 }
 
-
 /* Input Appareil */
 
-.searchAppareil .target_ing {
+.searchAppareil .target_apr {
     width: 130px;
     height: 50px;
     background-color: #68d9a4;
     color: #ffff;
-    border-radius: 5px;
+    border-radius: 8px;
     font-size: 15px;
     background-image: url(./images/arrowDown.svg);
     background-repeat: no-repeat;
@@ -185,31 +181,103 @@ body {
     padding-left: 20px;
     margin-left: 20px;
 }
+.target_apr::placeholder {
+    color: #fff;
+    opacity: 1;
+}
 
-.search_global .searchAppareil  .container_appareil{
-    width: 480px;
-    height: 480px;
+/* Second input liste déroulante */
+
+.search_global .searchAppareil .container_appareils {
+    width: 600px;
+    height: 360px;
     background: #68d9a4;
-    margin-left: 20px;
-    position: absolute;
-    bottom: 0px;
     display: none;
- 
+    border-radius: 5px;
+    margin-left: 50px;
+  
+    
 }
 
-.searchAppareil .container_appareil .arrowUp{
+.searchAppareil .container_appareils .arrowUp {
     margin-left: 90%;
-    margin-top: 5%;;
+    margin-top: 5%;
 }
 
+/* Container Appareil */
+
+.search_global .container_appareils .inp_apr {
+    width: 95%;
+    border: none;
+    outline: none;
+    background: #68d9a4;
+    margin-top: 20px;
+    text-align: left;
+    text-align: top;
+    text-indent: 25px;
+    color: #fff;
+    opacity: 1;
+}
+
+.searchAppareil .container_appareils .arrowUp2 {
+    margin-left: -3%;
+    margin-top: 0%;
+}
+/* Changement couleur input Appareils Place holder */
+.inp_apr::placeholder {
+    color: #fff;
+    opacity: 1;
+}
+
+/* Seconde input liste déroula
+nte avec les ingrédients(liste li) / fleche fermeture menu */
+/* Liste Ingrédient gauche */
+.container_appareils .liste_gauche {
+    list-style-type: none;
+    color: #fff;
+    margin-top: 35px;
+}
+
+.container_appareils .liste_gauche li {
+    margin-top: 8px;
+}
+
+/* Liste  Ingrédient Centre */
+.container_appareils .liste_centre {
+    color: #fff;
+    list-style-type: none;
+    margin-top: 30px;
+    margin-left: 60px;
+}
+
+.container_appareils .liste_centre li {
+    margin-top: 8px;
+}
+/* Liste  Ingrédient droit */
+.container_appareils .liste_droite {
+    color: #fff;
+    list-style-type: none;
+    margin-top: 30px;
+    margin-left: 60px;
+}
+
+.container_appareils .liste_droite li {
+    margin-top: 8px;
+    margin-left: -8px;
+}
+
+/* Liste  Ingrédient Total */
+.container_appareils .liste_total_appareils {
+    display: flex;
+}
 /* Input Ustensiles */
 
-.searchUstensiles .target_ing {
+.searchUstensiles .target_ust {
     width: 130px;
     height: 50px;
     background-color: #ed6454;
     color: white;
-    border-radius: 5px;
+    border-radius: 8px;
     background-image: url(./images/arrowDown.svg);
     background-repeat: no-repeat;
     background-position: right 15% bottom 50%;
@@ -217,22 +285,87 @@ body {
     outline: none;
     font-size: 15px;
     padding-left: 20px;
-    margin-left: 20px;
+    margin-left: 25px;
     border: none;
 }
 
- .searchUstensiles  .container_ustensile{
-    width: 480px;
-    height: 480px;
+/* Second input liste Ustensiles déroulante  */
+.searchUstensiles .container_ustensiles {
+    width: 600px;
+    height: 360px;
     background: #ed6454;
-    margin-left: 15px;
+    border-radius: 8px;
+    margin-left: 12px;
     display: none;
-
 }
 
-.searchUstensiles .container_ustensile .arrowUp{
-    margin-left: 90%;
-    margin-top: 5%;;
+/* Changement couleur input Ustensiles Place holder */
+.inp_ust::placeholder {
+    color: #fff;
+    opacity: 1;
+}
+
+/* Liste  Ustensilest Total */
+.container_ustensiles .liste_total_ustensiles {
+    display: flex;
+}
+
+/* Menu déroulant Ustensiles */
+.search_global .container_ustensiles .inp_ust {
+    width: 95%;
+    border: none;
+    outline: none;
+    background: #ed6454;
+    margin-top: 20px;
+    text-align: left;
+    text-align: top;
+    text-indent: 25px;
+}
+
+.searchUstensiles .container_ustensiles .arrowUp3 {
+    margin-left: -5%;
+    margin-top: 0%;
+}
+
+/* Changement couleur input (placeholder) */
+.target_ust::placeholder {
+    color: #fff;
+    opacity: 1;
+}
+
+/* Liste Ingrédient gauche */
+.container_ustensiles .liste_gauche {
+    list-style-type: none;
+    color: #fff;
+    margin-top: 35px;
+}
+
+.container_ustensiles .liste_gauche li {
+    margin-top: 8px;
+}
+
+/* Liste  Ingrédient Centre */
+.container_ustensiles .liste_centre {
+    color: #fff;
+    list-style-type: none;
+    margin-top: 30px;
+    margin-left: 60px;
+}
+
+.container_ustensiles .liste_centre li {
+    margin-top: 8px;
+}
+/* Liste  Ingrédient droit */
+.container_ustensiles .liste_droite {
+    color: #fff;
+    list-style-type: none;
+    margin-top: 30px;
+    margin-left: -20px;
+}
+
+.container_ustensiles .liste_droite li {
+    margin-top: 8px;
+    margin-left: 70px;
 }
 
 /* Partie Recette  */
@@ -243,18 +376,15 @@ body {
     width: 100%;
     margin-top: 40px;
     justify-content: space-around;
- 
- 
 }
 
 .flex_description .bloc_recette {
-    margin-top: 40px;
+    margin-top: 90px;
     margin-left: 60px;
     width: 470px;
     height: 430px;
     border-radius: 15px;
     background: #e7e7e7;
-    
 }
 
 .flex_description .bloc_recette .image {
