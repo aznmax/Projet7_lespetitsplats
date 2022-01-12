@@ -26,7 +26,7 @@ for (const recipe of recipes) {
   recetteNom.classList.add('nom_recette');
   // Ajout du contenu HTML
   recetteNom.innerHTML = `${recipe.name}<i class="far fa-clock"></i>
-    <span>${recipe.time}</span>`;
+    <span>${recipe.time} min</span>`;
 
   // Création du bloc infos recette
   const recetteInfos = document.createElement('div');
