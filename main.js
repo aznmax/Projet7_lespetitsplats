@@ -48,6 +48,8 @@ openListUstensiles.addEventListener("click", function () {
     openListUstensiles.style.display = "none";
     document.querySelector(".container_appareils").style.display ="none";
     openListAppareils.style.display = "block";
+    document.querySelector(".container_ingredient").style.display = "none";
+    openListIngredients.style.display = "block";
     
 });
 
