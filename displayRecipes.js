@@ -4,6 +4,8 @@ const recettes = document.querySelector('#recettes');
 
 console.log(recettes);
 
+let descriptionArr = [];
+
 for (const recipe of recipes) {
   // création de la div contenant la recette
   const recette = document.createElement('div');
@@ -40,7 +42,7 @@ for (const recipe of recipes) {
   // Boucle dans la liste pour aller récupérer chaque ingrédient
   for (const ingredient of recipe.ingredients) {
     const ligne = document.createElement('li'); // Création de l'élément
-    ligne.innerText = `${ingredient.ingredient} : ${ingredient.quantity} ${ingredient.unit}`; // Ajout du contenu
+    ligne.innerText = `${ingredient.ingredient} : ${ingredient.quantity??""}  ${ingredient.unit??""}`; // Ajout du contenu
     recetteIngredients.appendChild(ligne); // ajout de chaque ingrédients à la liste
   }
 
@@ -52,4 +54,26 @@ for (const recipe of recipes) {
 
   // Ajout du bloc recette à la liste des recettes
   recettes.appendChild(recette);
+  
+  const instructionRecettes = document.createElement('div');
+  instructionRecettes.classList.add("description_recettes");
+  
+    for(const instruction of recipe.description){
+  
+      if (!descriptionArr.includes(recipe.description)) {
+        const instruction = document.createElement('p')
+        descriptionArr.push(recipe.description);
+        instruction.innerText = recipe.description;
+        instructionRecettes.appendChild(instruction)
+  }
+    }
+   
+
+    recetteInfos.append(instructionRecettes)
+
+  
+
 }
+
+
+

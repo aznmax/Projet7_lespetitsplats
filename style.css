@@ -85,6 +85,23 @@ body {
     
 }
 
+.liste_ingredients,.liste_ustensiles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    overflow-y: auto;
+    height: 300px;
+    color: white;
+    list-style: none;
+  }
+
+  .liste_appareils {
+    display: grid;
+    grid-template-columns: repeat(2, 5fr);
+    height: 300px;
+    color: white;
+    list-style: none;
+  }
+
 /* Container Ingrédient */
 
 .search_global .searchIngredients .container_ingredient {
@@ -114,49 +131,12 @@ body {
     opacity: 1;
 }
 
-/* Seconde input liste déroulante avec les ingrédients(liste li) / fleche fermeture menu */
-
-/* Liste Ingrédient gauche */
-.container_ingredient .liste_gauche {
-    list-style-type: none;
-    color: #fff;
-    margin-top: 25px;
-}
-.container_ingredient .liste_gauche li {
-    margin-top: 8px;
-}
 
 .searchIngredients .container_ingredient .arrowUp {
     margin-top: 0%;
     margin-left: -20px;
 }
-/* Liste  Ingrédient Centre */
-.container_ingredient .liste_centre {
-    color: #fff;
-    list-style-type: none;
-    margin-top: 30px;
-    margin-left: 60px;
-}
 
-.container_ingredient .liste_centre li {
-    margin-top: 8px;
-}
-/* Liste  Ingrédient droit */
-.container_ingredient .liste_droite {
-    color: #fff;
-    list-style-type: none;
-    margin-top: 30px;
-    margin-left: 60px;
-}
-
-.container_ingredient .liste_droite li {
-    margin-top: 8px;
-    margin-left: -10px;
-}
-
-.container_ingredient .liste_total_ingredients {
-    display: flex;
-}
 /* Changement couleur PlaceHolder */
 .target_ing::placeholder {
     color: #fff;
@@ -189,7 +169,7 @@ body {
 /* Second input liste déroulante */
 
 .search_global .searchAppareil .container_appareils {
-    width: 600px;
+    width: 360px;
     height: 360px;
     background: #68d9a4;
     display: none;
@@ -199,15 +179,12 @@ body {
     
 }
 
-.searchAppareil .container_appareils .arrowUp {
-    margin-left: 90%;
-    margin-top: 5%;
-}
+
 
 /* Container Appareil */
 
 .search_global .container_appareils .inp_apr {
-    width: 95%;
+    width: 90%;
     border: none;
     outline: none;
     background: #68d9a4;
@@ -217,11 +194,13 @@ body {
     text-indent: 25px;
     color: #fff;
     opacity: 1;
+    display: inline-block;
 }
 
 .searchAppareil .container_appareils .arrowUp2 {
-    margin-left: -3%;
-    margin-top: 0%;
+    margin-top: 5px;
+    margin-left: -2%;
+   
 }
 /* Changement couleur input Appareils Place holder */
 .inp_apr::placeholder {
@@ -229,47 +208,7 @@ body {
     opacity: 1;
 }
 
-/* Seconde input liste déroula
-nte avec les ingrédients(liste li) / fleche fermeture menu */
-/* Liste Ingrédient gauche */
-.container_appareils .liste_gauche {
-    list-style-type: none;
-    color: #fff;
-    margin-top: 35px;
-}
 
-.container_appareils .liste_gauche li {
-    margin-top: 8px;
-}
-
-/* Liste  Ingrédient Centre */
-.container_appareils .liste_centre {
-    color: #fff;
-    list-style-type: none;
-    margin-top: 30px;
-    margin-left: 60px;
-}
-
-.container_appareils .liste_centre li {
-    margin-top: 8px;
-}
-/* Liste  Ingrédient droit */
-.container_appareils .liste_droite {
-    color: #fff;
-    list-style-type: none;
-    margin-top: 30px;
-    margin-left: 60px;
-}
-
-.container_appareils .liste_droite li {
-    margin-top: 8px;
-    margin-left: -8px;
-}
-
-/* Liste  Ingrédient Total */
-.container_appareils .liste_total_appareils {
-    display: flex;
-}
 /* Input Ustensiles */
 
 .searchUstensiles .target_ust {
@@ -332,6 +271,7 @@ nte avec les ingrédients(liste li) / fleche fermeture menu */
     color: #fff;
     opacity: 1;
 }
+
 
 /* Liste Ingrédient gauche */
 .container_ustensiles .liste_gauche {
@@ -399,20 +339,25 @@ nte avec les ingrédients(liste li) / fleche fermeture menu */
 .flex_description .bloc_recette .nom_recette {
     display: flex;
     justify-content: space-between;
-    margin-left: 20px;
+    margin-top: 25px;
     font-size: 18px;
+    margin-left:10px;
 }
 
-.flex_description .bloc_recette .nom_recette i {
-    margin-left: auto;
-    margin-top: 22px;
+
+
+.flex_description .bloc_recette .nom_recette i  {
+    margin-top: 5px;
+    font-size: 18px;
+    margin-left: 190px;
+   
 }
 
-.flex_description .bloc_recette .nom_recette span {
-    margin-top: 20px;
-    margin-right: 50px;
-    margin-left: 8px;
+.flex_description .bloc_recette .nom_recette span  {
+    margin-top: 2px;
     font-size: 18px;
+    margin-right: 30px;
+    white-space: nowrap;
 }
 
 /* Liste ingrédients */
@@ -434,4 +379,19 @@ nte avec les ingrédients(liste li) / fleche fermeture menu */
     display: block;
     width: 210px;
     margin-right: 30px;
+}
+
+/* Aligement Ingrédients / Description Recettes */
+.information_recettes .liste_ingredients1{
+    white-space: nowrap;
+  list-style-type: none ;
+    font-size: 12px;
+    margin-left: -15px;
+    margin-top: 30px;
+}
+
+.information_recettes .description_recettes p{
+    font-size: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
 }
