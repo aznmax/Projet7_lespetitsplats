@@ -14,8 +14,8 @@ for (const recipe of recipes) {
     for (const ingredients of recipe.ingredients) {
         if (!ingredientsArr.includes(ingredients.ingredient)) {
             ingredientsArr.push(ingredients.ingredient);
-
             const creationListe = document.createElement("li");
+            creationListe.classList.add("ingredient")
             creationListe.innerText = `${ingredients.ingredient}`;
 
             listTotalIngredients.appendChild(creationListe);
@@ -26,6 +26,7 @@ for (const recipe of recipes) {
         appliancesArr.push(recipe.appliance);
 
         const creationListe = document.createElement("li");
+        creationListe.classList.add("appareil")
         creationListe.innerText = `${recipe.appliance}`;
 
         listTotalAppliances.appendChild(creationListe);
