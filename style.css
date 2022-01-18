@@ -54,6 +54,15 @@ body {
     width: 30px;
 }
 
+/* Création Tags */
+
+.tagIngredients{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    color: #fff;
+}
+
 /* Section Création Container  et Disposition différents inputs */
 
 .search_global {
@@ -86,8 +95,6 @@ body {
 }
 
 
-
-
 /* Organisation & Rangement liste Ingrédients / Appareil / Ustensile */
 
 .liste_ingredients,.liste_ustensiles {
@@ -106,7 +113,6 @@ body {
     color: white;
     list-style: none;
 }  
-
 
 /* Création Second input (Une fois avoir cliquer sur le premier) */
 
@@ -269,13 +275,20 @@ body {
 
 
 
-/* Changement couleur input (placeholder) */
+/* Positionnement Tags */
 
 .tagButtonIngredients{
+    display: flex;
+    flex-direction: row-reverse;
+    border-radius: 5px;
     margin-left: 150px;
     margin-top: 12px;
+    height: 30px;
     background: #3282f7;
 }
+
+/* Positionnement Icone fermeture Tags */
+
 
 
 /* Partie Recette  */

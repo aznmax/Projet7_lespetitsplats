@@ -14,7 +14,15 @@ liste.forEach(function(item){
         const tagIng = document.createElement('div');
         tagIng.classList.add("tagButtonIngredients");
         tagIng.innerText = `${item.innerText}`
-        elementTag.append(tagIng)
+        elementTag.append(tagIng);
+        const elementIcon = document.createElement('div');
+        elementIcon.classList.add("crossIcon");
+        elementIcon.innerHTML = `<i class="far fa-times-circle"></i>`;
+        console.log(elementIcon);
+        tagIng.append(elementIcon)
+         
     })
+
+    
 })
 

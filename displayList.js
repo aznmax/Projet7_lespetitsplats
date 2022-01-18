@@ -4,54 +4,71 @@ const listTotalIngredients = document.querySelector("#liste_ingredients");
 const listTotalAppliances = document.querySelector("#liste_appareils");
 const listTotalUtensiles = document.querySelector("#liste_ustensiles");
 
-
 let ingredientsArr = [];
-let appliancesArr = [];
-let ustensilesArr = new Set();
+let appliancesSet = new Set();
+let ustensilesSet = new Set();
 
-
+// Génération des tableaux/sets
 for (const recipe of recipes) {
-    for (const ingredients of recipe.ingredients) {
-        if (!ingredientsArr.includes(ingredients.ingredient)) {
-            ingredientsArr.push(ingredients.ingredient);
-            const creationListe = document.createElement("li");
-            creationListe.classList.add("ingredient")
-            creationListe.innerText = `${ingredients.ingredient}`;
-
-            listTotalIngredients.appendChild(creationListe);
-        }
+  for (const ingredients of recipe.ingredients) {
+    if (!ingredientsArr.includes(ingredients.ingredient)) {
+      ingredientsArr.push(ingredients.ingredient);
     }
+  }
+  
+  appliancesSet.add(recipe.appliance);
 
-    if (!appliancesArr.includes(recipe.appliance)) {
-        appliancesArr.push(recipe.appliance);
-
-        const creationListe = document.createElement("li");
-        creationListe.classList.add("appareil")
-        creationListe.innerText = `${recipe.appliance}`;
-
-        listTotalAppliances.appendChild(creationListe);
-    }
-
-    recipe.ustensils.forEach(u => ustensilesArr.add(u));
+  recipe.ustensils.forEach((u) => ustensilesSet.add(u));
 }
 
-ustensilesArr.forEach(ustensile => {
-    const creationListe = document.createElement("li");
-      creationListe.innerText = ustensile;
-  
-      listTotalUtensiles.appendChild(creationListe);
-  })
-  
+// Sorts
+ingredientsArr = sortArray(ingredientsArr);
+// appliancesArr = sortArray(appliancesArr); 
+const appliancesArr = sortSet(appliancesSet); 
+const ustensilesArr = sortSet(ustensilesSet);
 
+// Ajouts au DOM
+ingredientsArr.forEach((ingredient) => createItem(ingredient,"ingredient", listTotalIngredients));
+appliancesArr.forEach((appliance) => createItem(appliance, "appliance", listTotalAppliances));
+ustensilesArr.forEach((ustensile) => createItem(ustensile, "ustensile",listTotalUtensiles));
 
-console.log(ingredientsArr);
+const inputs = document.querySelectorAll(".input");
+const closes = document.querySelectorAll(".arrowUp");
 
-function createDiv(tag, classes, container) {
-    const el = document.createElement(tag);
+inputs.forEach((input) => input.addEventListener("click", handleOpen));
+closes.forEach((close) => close.addEventListener("click", handleClose));
 
-    el.classList.add(...classes);
+function handleOpen(e) {
+  handleClose();
+  e.target.style.setProperty("display", "none");
+  getContainer(e.target).style.setProperty("display", "block");
+}
 
-    container.appendChild(el);
+function handleClose() {
+  inputs.forEach((input) => {
+    input.style.removeProperty("display");
+    getContainer(input).style.removeProperty("display");
+  });
+}
 
-    return el;
+function getContainer(input) {
+  return input.parentElement.querySelector(".container");
+}
+
+function sortArray(arr) {
+  return arr.sort(
+    (a, b) => a.localeCompare(b)
+  );
+}
+
+function sortSet(list) {
+  return sortArray([...list]);
+}
+
+function createItem(text,classe, container) {
+    const li = document.createElement("li");
+    li.classList.add(classe)
+    li.innerText = text;
+
+    container.appendChild(li);
 }
