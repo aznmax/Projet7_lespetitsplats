@@ -27,8 +27,23 @@ for (const recipe of recipes) {
   // Ajout de la classe
   recetteNom.classList.add('nom_recette');
   // Ajout du contenu HTML
-  recetteNom.innerHTML = `${recipe.name}<i class="far fa-clock"></i>
-    <span>${recipe.time} min </span>`;
+  recetteNom.innerHTML = `${recipe.name}`
+
+  // Création du  span //
+  const spanRecipe = document.createElement('span');
+  const divRecipes = document.createElement('recipeTimes');
+  console.log(divRecipes);
+  console.log(spanRecipe);
+// Ajout de la classe span//
+  spanRecipe.classList.add('recipeTimes');
+  console.log(spanRecipe);
+  spanRecipe.innerHTML = ` <i class="far fa-clock"></i> ${recipe.time} min 
+  `;
+  recetteNom.append(spanRecipe)
+
+
+
+  
 
   // Création du bloc infos recette
   const recetteInfos = document.createElement('div');

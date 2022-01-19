@@ -1,11 +1,8 @@
 const liste = document.querySelectorAll('.ingredient');
-console.log(liste);
 const elementTag = document.querySelector('.tagIngredients');
-console.log(elementTag);
 const contIng = document.querySelector(".container_ingredient");
-console.log(contIng);
 const inpIng = document.querySelector('.target_ing');
-console.log(inpIng);
+
 
 // Tag Ingredients //
 
