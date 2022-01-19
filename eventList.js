@@ -7,6 +7,12 @@ console.log(liste);
 const elementTag = document.querySelector('.tagIngredients');
 console.log(elementTag);
 
+const contIng = document.querySelector(".container_ingredient");
+console.log(contIng);
+
+const inpIng = document.querySelector('.target_ing');
+console.log(inpIng);
+
 
 liste.forEach(function(item){
     item.addEventListener('click',function(){
@@ -20,9 +26,11 @@ liste.forEach(function(item){
         elementIcon.innerHTML = `<i class="far fa-times-circle"></i>`;
         console.log(elementIcon);
         tagIng.append(elementIcon)
-         
+        contIng.style.display = "none";
+        inpIng.style.display = "block";  
+        tagIng.addEventListener("click",function(){
+            tagIng.style.display = "none";
+        }) 
     })
-
-    
 })
 
