@@ -1,21 +1,16 @@
-
-
 const liste = document.querySelectorAll('.ingredient');
 console.log(liste);
-
-
 const elementTag = document.querySelector('.tagIngredients');
 console.log(elementTag);
-
 const contIng = document.querySelector(".container_ingredient");
 console.log(contIng);
-
 const inpIng = document.querySelector('.target_ing');
 console.log(inpIng);
 
+// Tag Ingredients //
+
 liste.forEach(function(item){
     item.addEventListener('click',function(){
-        console.log(item.innerText);
         const tagIng = document.createElement('div');
         tagIng.classList.add("tagButtonIngredients");
         tagIng.innerText = `${item.innerText}`
@@ -23,7 +18,6 @@ liste.forEach(function(item){
         const elementIcon = document.createElement('div');
         elementIcon.classList.add("crossIcon");
         elementIcon.innerHTML = `<i class="far fa-times-circle"></i>`;
-        console.log(elementIcon);
         tagIng.append(elementIcon)
         contIng.style.display = "none";
         inpIng.style.display = "block";  
@@ -36,7 +30,6 @@ liste.forEach(function(item){
 // Tags Appareils // 
 
 const liste2 = document.querySelectorAll('.appliance');
-const applianceTag = document.querySelector('.tagAppareil');
 const elementTagApr = document.querySelector('.tagAppareil');
 const contApr = document.querySelector(".container_appareils");
 const inpApr = document.querySelector('.target_apr');
@@ -51,7 +44,6 @@ liste2.forEach(function(item2){
         const elementIcon2 = document.createElement('div');
         elementIcon2.classList.add("crossIcon2");
         elementIcon2.innerHTML = `<i class="far fa-times-circle"></i>`;
-        console.log(elementIcon2);
         tagApr.append(elementIcon2)
         contApr.style.display = "none";
         inpApr.style.display = "block";  
@@ -60,6 +52,32 @@ liste2.forEach(function(item2){
         }) 
     
     })
-})
+});
+
+// Tags Ustensiles//
+const liste3 = document.querySelectorAll('.ustensile');
+const elementTagUst = document.querySelector('.tagUstensiles');
+const contUst = document.querySelector(".container_ustensiles");
+const inpUst = document.querySelector('.target_ust');
+
+liste3.forEach(function(item3){
+    item3.addEventListener('click',function(){
+        const tagUst = document.createElement('div');
+        tagUst.classList.add("tagButtonUstensile");
+        tagUst.innerText = `${item3.innerText}`;
+        elementTagUst.append(tagUst);
+        const elementIcon3 = document.createElement('div');
+        elementIcon3.classList.add("crossIcon3");
+        elementIcon3.innerHTML = `<i class="far fa-times-circle"></i>`;
+        tagUst.append(elementIcon3);
+        contUst.style.display = "none";
+        inpUst.style.display = "block";  
+        tagUst.addEventListener("click",function(){
+            tagUst.style.display = "none";
+        }) 
+    })
+});
+
+
 
 

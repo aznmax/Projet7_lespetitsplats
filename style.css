@@ -81,6 +81,15 @@ display: flex;
 
 }
 
+/* Création Tags Ustensiles */
+.tagUstensiles{
+    display: flex;
+    flex-wrap: wrap;
+    color: #fff;
+
+}
+
+
 
 
 
@@ -320,6 +329,18 @@ display: flex;
     margin-left: 15px;
     height: 30px;
     background: #68d9a4;
+    cursor: pointer;
+}
+
+/* Positionnement Tag Ustensile */
+
+.tagButtonUstensile{
+    display: flex;
+    flex-direction: row-reverse;
+    border-radius: 5px;
+    margin-left: 20px;
+    height: 30px;
+    background: #ed6454;
     cursor: pointer;
 }
 
