@@ -54,14 +54,35 @@ body {
     width: 30px;
 }
 
-/* Création Tags */
+/* Positionnement all Tag */
+
+.allTag{
+display: flex;
+}
+
+/* Création Tags Ingredients */
 
 .tagIngredients{
     display: flex;
     flex-wrap: wrap;
     margin-top: 20px;
     color: #fff;
+    margin-left: 120px;
+ 
 }
+
+/* Création Tags Appareil */
+
+.tagAppareil{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    color: #fff;
+
+}
+
+
+
 
 /* Section Création Container  et Disposition différents inputs */
 
@@ -71,6 +92,7 @@ body {
     margin-left: 114px;
     margin-top: 40px;
     position: absolute;
+    top: 290px;
 }
 
 
@@ -104,6 +126,7 @@ body {
     height: 300px;
     color: white;
     list-style: none;
+    cursor: pointer;
 }  
 
 .liste_appareils {
@@ -112,6 +135,7 @@ body {
     height: 300px;
     color: white;
     list-style: none;
+    cursor: pointer;
 }  
 
 /* Création Second input (Une fois avoir cliquer sur le premier) */
@@ -275,16 +299,28 @@ body {
 
 
 
-/* Positionnement Tags */
+/* Positionnement Tags Ingrédients */
 
 .tagButtonIngredients{
     display: flex;
     flex-direction: row-reverse;
     border-radius: 5px;
-    margin-left: 150px;
-    margin-top: 12px;
     height: 30px;
     background: #3282f7;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+/* Positionnement Tag Appareil */
+
+.tagButtonAppareil{
+    display: flex;
+    flex-direction: row-reverse;
+    border-radius: 5px;
+    margin-left: 15px;
+    height: 30px;
+    background: #68d9a4;
+    cursor: pointer;
 }
 
 /* Positionnement Icone fermeture Tags */
@@ -297,7 +333,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    margin-top: 40px;
+    margin-top: 50px;
     justify-content: space-around;
 }
 
