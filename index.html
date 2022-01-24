@@ -10,80 +10,74 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-<link rel="shortcut icon" href="#" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
+        <link rel="shortcut icon" href="#" />
     </head>
     <body>
         <header class="flexTitre">
             <div class="titre_logo">
-              <img src="./images/lpp_logo.svg" alt="Logo les petits plats" />
-              <h2>Les petits plats</h2>
+                <img src="./images/lpp_logo.svg" alt="Logo les petits plats" />
+                <h2>Les petits plats</h2>
             </div>
-          </header>
-          
-          <section>
+        </header>
+
+        <section>
             <div class="search_bar">
-              <input type="search" placeholder="Rechercher un ingrédient,appareil,ustensiles ou une recette" />
-              <div class="icone_searchbar">
-                <img src="./images/loupe.svg" alt="" />
-              </div>
-              <label></label>
+                <input type="search" placeholder="Rechercher un ingrédient,appareil,ustensiles ou une recette" />
+                <div class="icone_searchbar">
+                    <img src="./images/loupe.svg" alt="" />
+                </div>
+                <label></label>
             </div>
             <div class="allTag">
-              <div class="tagIngredients">
-                <div class="closeLogoTag">
+                <div class="tagIngredients">
+                    <div class="closeLogoTag"></div>
                 </div>
-              </div>
-              <div class="tagAppareil">
-                <div class="closeLogoTag">
+                <div class="tagAppareil">
+                    <div class="closeLogoTag"></div>
+                    <div class="tagUstensiles">
+                        <div class="closeLogoTag"></div>
+                    </div>
                 </div>
-                <div class="tagUstensiles">
-                  <div class="closeLogoTag">
-                  </div>
+                <div class="search_global">
+                    <div class="searchIngredients">
+                        <input class="target_ing" placeholder="Ingrédients" />
+                        <div class="container_ingredient">
+                            <input class="inp_ing" placeholder="Rechercher un ingrédient" />
+                            <img class="arrowUp" src="./images/arrowUp.svg" alt="" />
+                            <div class="liste_total_ingredients">
+                                <ul class="liste_ingredients" id="liste_ingredients"></ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="searchAppareil">
+                        <input class="target_apr" placeholder="Appareil" />
+                        <div class="container_appareils">
+                            <input class="inp_apr" placeholder="Rechercher un appareil" />
+                            <img class="arrowUp2" src="./images/arrowUp.svg" alt="" />
+                            <div class="liste_total_appareils">
+                                <ul class="liste_appareils" id="liste_appareils"></ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="searchUstensiles">
+                        <input class="target_ust" placeholder="Ustensiles" />
+                        <div class="container_ustensiles">
+                            <input class="inp_ust" placeholder="Rechercher un ustensile" />
+                            <img class="arrowUp3" src="./images/arrowUp.svg" alt="" />
+                            <div class="liste_total_ustensiles">
+                                <ul class="liste_ustensiles" id="liste_ustensiles"></ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="search_global">    
-              <div class="searchIngredients">
-                <input class="target_ing" placeholder="Ingrédients" />
-                <div class="container_ingredient">
-                  <input class="inp_ing" placeholder="Rechercher un ingrédient" />
-                  <img class="arrowUp" src="./images/arrowUp.svg" alt="">
-                  <div class="liste_total_ingredients">
-                    <ul class="liste_ingredients" id="liste_ingredients">
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="searchAppareil">
-                <input class="target_apr" placeholder="Appareil" />
-                <div class="container_appareils">
-                  <input class="inp_apr" placeholder="Rechercher un appareil" />
-                  <img class="arrowUp2" src="./images/arrowUp.svg" alt="">
-                  <div class="liste_total_appareils">
-                    <ul class="liste_appareils" id="liste_appareils">
-                    </ul>
-                  </div>
-                </div>
-              </div>
-          
-              <div class="searchUstensiles">
-                <input class="target_ust" placeholder="Ustensiles" />
-                <div class="container_ustensiles">
-                  <input class="inp_ust" placeholder="Rechercher un ustensile" />
-                  <img class="arrowUp3" src="./images/arrowUp.svg" alt="">
-                  <div class="liste_total_ustensiles">
-                    <ul class="liste_ustensiles" id="liste_ustensiles">
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            </div>
-          </section>
-          
-          <section class="flex_description" id="recettes">
+        </section>
+
+        <section class="flex_description" id="recettes">
             <!-- STRUCTURE DE REFERENCE -->
             <!-- <div class="bloc_recette">
                           <div class="image"></div>
@@ -101,10 +95,10 @@
                                   </div>
                           </div>
                       </div>           -->
-          </section>
-    <script src="main.js" type="module"></script>
-    <script src="displayRecipes.js" type="module"></script>
-    <script src="./displayList.js" type="module"></script>
-    <script src="./eventList.js" type="module"></script>
+        </section>
+        <script src="main.js" type="module"></script>
+        <script src="./display/displayRecipes.js" type="module"></script>
+        <script src="./display/displayList.js" type="module"></script>
+        <script src="./eventList.js" type="module"></script>
     </body>
 </html>

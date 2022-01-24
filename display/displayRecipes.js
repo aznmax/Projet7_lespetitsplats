@@ -1,4 +1,4 @@
-import { recipes } from './JSON/recipes.js';
+import { recipes } from '../JSON/recipes.js';
 
 const recettes = document.querySelector('#recettes');
 
@@ -32,11 +32,9 @@ for (const recipe of recipes) {
   // Création du  span //
   const spanRecipe = document.createElement('span');
   const divRecipes = document.createElement('recipeTimes');
-  console.log(divRecipes);
-  console.log(spanRecipe);
+
 // Ajout de la classe span//
   spanRecipe.classList.add('recipeTimes');
-  console.log(spanRecipe);
   spanRecipe.innerHTML = ` <i class="far fa-clock"></i> ${recipe.time} min 
   `;
   recetteNom.append(spanRecipe)
