@@ -44,7 +44,7 @@ liste2.forEach(function (item2) {
         const tagApr = document.createElement("div");
         tagApr.classList.add("tagButtonAppareil");
         tagApr.innerText = `${item2.innerText}`;
-        elementTag.append(tagApr);
+        elementTagUst.append(tagApr);
         // elementTagApr.append(tagApr);
         const elementIcon2 = document.createElement("div");
         elementIcon2.classList.add("crossIcon2");
@@ -69,8 +69,7 @@ liste3.forEach(function (item3) {
         const tagUst = document.createElement("div");
         tagUst.classList.add("tagButtonUstensile");
         tagUst.innerText = `${item3.innerText}`;
-        elementTagApr.append(tagUst)
-        // elementTagUst.append(tagUst);
+        elementTagApr.append(tagUst);
         const elementIcon3 = document.createElement("div");
         elementIcon3.classList.add("crossIcon3");
         elementIcon3.innerHTML = `<i class="far fa-times-circle"></i>`;
