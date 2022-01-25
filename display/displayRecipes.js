@@ -55,7 +55,7 @@ for (const recipe of recipes) {
   // Boucle dans la liste pour aller récupérer chaque ingrédient
   for (const ingredient of recipe.ingredients) {
     const ligne = document.createElement('li'); // Création de l'élément
-    ligne.innerText = `${ingredient.ingredient} : ${ingredient.quantity??""}  ${ingredient.unit??""}`; // Ajout du contenu
+    ligne.innerText = `${ingredient.ingredient}  : ${ingredient.quantity??""}  ${ingredient.unit??""}`; // Ajout du contenu
     recetteIngredients.appendChild(ligne); // ajout de chaque ingrédients à la liste
   }
 
@@ -85,8 +85,8 @@ for (const recipe of recipes) {
     recetteInfos.append(instructionRecettes)
 
   
-
 }
+
 
 
 
