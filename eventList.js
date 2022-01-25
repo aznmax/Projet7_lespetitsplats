@@ -1,4 +1,4 @@
-import {recipes } from "../JSON/recipes.js";
+import {recipes } from "./JSON/recipes.js";
 console.log(recipes);
 
 const liste = document.querySelectorAll(".ingredient");
