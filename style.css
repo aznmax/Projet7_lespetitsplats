@@ -1,4 +1,3 @@
-Body
 body {
     height: 150vh;
     font-family: "Lato", sans-serif;
@@ -88,7 +87,7 @@ margin-top: 20px;
 
 }
 
-/* Section Création Container  et Disposition différents inputs */
+/* Section Création Container  et Disposition différents inputs en Absolute */
 
 .search_global {
     display: flex;
@@ -100,8 +99,9 @@ margin-top: 20px;
 }
 
 
+
 .search_global .searchIngredients .container_ingredients {
-    width: 820px;
+    width: 850px;
     border-radius: 5px;
     background: #3282f7;
     display: none;
@@ -110,13 +110,19 @@ margin-top: 20px;
 
 .search_global .searchAppareil .container_appliances {
     width: 360px;
-    height: 360px;
     background: #68d9a4;
     display: none;
     border-radius: 5px;
     margin-left: 50px;
     
     
+}
+
+.searchUstensiles .container_ustensiles {
+    background: #ed6454;
+    border-radius: 8px;
+    margin-left: 12px;
+    display: none;
 }
 
 
@@ -133,14 +139,14 @@ margin-top: 20px;
 
 .liste_appareils {
     display: grid;  
-    grid-template-columns: repeat(2, 5fr);
-    height: 300px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 15px 35px;
     color: white;
     list-style: none;
     cursor: pointer;
 }  
 
-/* Création Second input (Une fois avoir cliquer sur le premier) */
+/* Modification taille Second input / et modification texte (placeHolder) */
 
 .search_global .container_ingredients .inp_ing {
     width: 95%;
@@ -179,17 +185,8 @@ margin-top: 20px;
     text-indent: 25px;
 }
  
-/* Création Différents Container Ingrédients / Appareils / Ustensile (Container qui contient la liste des ingrédients) */
 
-.searchUstensiles .container_ustensiles {
-    width: 600px;
-    height: 360px;
-    background: #ed6454;
-    border-radius: 8px;
-    margin-left: 12px;
-    display: none;
-}
-
+/* Création  second Input */
 
 .searchIngredients .target_ing {
     width: 130px;
@@ -294,11 +291,16 @@ margin-top: 20px;
     opacity: 1;
 }  
 
-/* Liste  Ustensilest Total */
-.container_ustensiles .liste_total_ustensiles {
-    display: flex;
+/* Liste  Total */
+.container_ingredients .liste_total_ingredients{
+    padding: 5px;
 }
 
+.container_ustensiles .liste_total_ustensiles {
+    display: flex;
+    padding: 5px;
+}
+/* Positionnement et modification des différents Tags */
 
 .tagButton{
     display: flex;
@@ -310,19 +312,19 @@ margin-top: 20px;
     margin-left: 20px;
 }
 
-/* Positionnement Tags Ingrédients */
+/* Background Tags Ingrédients */
 
 .tagButtonIngredient{
     background: #3282f7;
 }
 
-/* Positionnement Tag Appareil */
+/* Background Tag Appareil */
 
 .tagButtonAppliance{
     background: #68d9a4;
 }
 
-/* Positionnement Tag Ustensile */
+/* Background Tag Ustensile */
 
 .tagButtonUstensile{
     background: #ed6454;
@@ -404,6 +406,7 @@ margin-top: 20px;
     display: block;
     width: 130px;
     margin-left: 20px;
+    padding: 20px 0;
 }
 
 .flex_description .bloc_recette .information_recettes .description_recette {
