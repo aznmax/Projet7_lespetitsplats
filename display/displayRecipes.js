@@ -9,7 +9,8 @@ generateRecipe();
 // let descriptionArr = [];
 
 function generateRecipe() {
-    for (const recipe of recipes) {
+    // for (const recipe of recipes) {
+    Object.assign(recipes, recipes.map(recipe => {
         // création de la div contenant la recette
         const recette = document.createElement("div");
         // ajout de la classe qui va bien
@@ -61,28 +62,21 @@ function generateRecipe() {
         // Ajout de la liste des ingrédients aux infos recette
         recetteInfos.appendChild(recetteIngredients);
 
-        // Ajout des différents éléments de la recette au bloc recette
-        recette.append(recetteImage, recetteCarte, recetteNom, recetteInfos);
-
-        // Ajout du bloc recette à la liste des recettes
-        recettes.appendChild(recette);
-
         const instructionRecettes = document.createElement("div");
         instructionRecettes.classList.add("description_recettes");
-
-        // for (const instruction of recipe.description) {
-        //     if (!descriptionArr.includes(recipe.description)) {
-        //         const instruction = document.createElement("p");
-        //         descriptionArr.push(recipe.description);
-        //         instruction.innerText = recipe.description;
-        //         instructionRecettes.appendChild(instruction);
-        //     }
-        // }
         
         const instruction = document.createElement("p");
         instruction.innerText = recipe.description;
         instructionRecettes.appendChild(instruction);
 
         recetteInfos.append(instructionRecettes);
-    }
+
+        // Ajout des différents éléments de la recette au bloc recette
+        recette.append(recetteImage, recetteCarte, recetteNom, recetteInfos);
+
+        // Ajout du bloc recette à la liste des recettes
+        recettes.appendChild(recette);
+
+        return {...recipe,element:recette};
+    }))
 }

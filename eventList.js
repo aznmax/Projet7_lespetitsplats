@@ -1,8 +1,9 @@
 import { recipes } from "./JSON/recipes.js";
+import { updateList } from "./updateList.js";
 console.log(recipes);
 
 const tabComps = ["ingredient", "appliance", "ustensile"];
-// Liste des tags selectionnés
+/** Liste des tags selectionnés */ 
 export const tabTags = {
     tagIngredient: [],
     tagAppliance: [],
@@ -19,7 +20,6 @@ function generateList() {
         const input = document.querySelector(`.target_${compo.slice(0, 3)}`);
 
         const tagClass = `tagButton${capitalize(compo)}`;
-        const divTagClass = `nameTag${capitalize(compo)}`;
 
         liste.forEach(function (item) {
             item.addEventListener("click", () =>
@@ -28,7 +28,6 @@ function generateList() {
                     container,
                     input,
                     tagClass,
-                    divTagClass,
                     item.innerText,
                     `tag${capitalize(compo)}`
                 )
@@ -37,7 +36,7 @@ function generateList() {
     });
 }
 
-function createTag(elementTag, container, input, tagClass, divTagClass, content, className) {
+function createTag(elementTag, container, input, tagClass, content, className) {
     tabTags[className].push(content);
 
     const tag = document.createElement("div");
@@ -45,7 +44,7 @@ function createTag(elementTag, container, input, tagClass, divTagClass, content,
     elementTag.append(tag);
 
     const divTag = document.createElement("div");
-    divTag.classList.add(divTagClass);
+    divTag.classList.add('nameTag');
     divTag.innerText = content;
     tag.append(divTag);
 
@@ -56,14 +55,23 @@ function createTag(elementTag, container, input, tagClass, divTagClass, content,
 
     container.style.display = "none";
     input.style.display = "block";
-    tag.addEventListener("click", hideTag);
+    tag.addEventListener("click", deleteTag);
+
+    updateList();
 }
 
 function capitalize(s) {
     return s[0].toUpperCase() + s.slice(1);
 }
 
-function hideTag(e) {
+function deleteTag(e) {
     let el = e.target.closest(".tagButton");
+    // R2cupère la classe pour avoir le type de composant
+    const type = el.classList[1].replace('Button', '');
+    // Récupère le nom du composant
+    const name = el.querySelector('.nameTag');
+
+    tabTags[type] = tabTags[type].filter(tag => tag !== name.innerText);
+
     el.remove();
 }
