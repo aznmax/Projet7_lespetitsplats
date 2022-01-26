@@ -76,5 +76,5 @@ function deleteTag(e) {
     el.remove();
 
     resetLists();
-    // update
+    updateLists();
 }

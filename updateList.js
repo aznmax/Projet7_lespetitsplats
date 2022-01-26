@@ -5,17 +5,19 @@ const lists = {
     ingredients:document.querySelectorAll(".ingredient"),
     appliances:document.querySelectorAll(".appliance"),
     ustensils:document.querySelectorAll(".ustensile"),
+    recipes: document.querySelectorAll('.bloc_recette')
 }
 
 export function updateLists() {
+    console.trace(tabTags)
     // Temporaire
     // if (!Object.keys(tabTags).reduce((cum, curr) => cum + tabTags[curr].length, 0)) return;
     if (!(tabTags.tagIngredient.length + tabTags.tagAppliance.length + tabTags.tagUstensile.length)) return;
+    console.log('update les listes')
 
     const ingSet = new Set();
     const appSet = new Set();
     const ustSet = new Set();
-    console.log(appSet);
 
     // 1. Parcours des recettes
     recipes.forEach((recipe) => {
@@ -47,8 +49,6 @@ export function updateLists() {
             recipe.element.style.setProperty("display", "none");
         }
     });
-
-    console.log(appSet);
 
     // Classer liste Ingrédients //
     showItemsFromTags(lists.ingredients, ingSet);
