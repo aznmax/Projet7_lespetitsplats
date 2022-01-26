@@ -6,7 +6,7 @@ const tabComps = ["ingredient", "appliance", "ustensile"];
 /** Liste des tags selectionnés */ 
 export const tabTags = {
     tagIngredient: [],
-    tagAppliance: [],
+    tagAppliance: [], // Length max = 1
     tagUstensile: [],
 };
 
