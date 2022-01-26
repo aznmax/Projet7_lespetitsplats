@@ -2,18 +2,18 @@ import { tabTags } from "./eventList.js";
 import { recipes } from "./JSON/recipes.js";
 
 const lists = {
-    ingredients:document.querySelectorAll(".ingredient"),
-    appliances:document.querySelectorAll(".appliance"),
-    ustensils:document.querySelectorAll(".ustensile"),
-    recipes: document.querySelectorAll('.bloc_recette')
-}
+    ingredients: document.querySelectorAll(".ingredient"),
+    appliances: document.querySelectorAll(".appliance"),
+    ustensils: document.querySelectorAll(".ustensile"),
+    recipes: document.querySelectorAll(".bloc_recette"),
+};
 
 export function updateLists() {
-    console.trace(tabTags)
+    console.trace(tabTags);
     // Temporaire
     // if (!Object.keys(tabTags).reduce((cum, curr) => cum + tabTags[curr].length, 0)) return;
     if (!(tabTags.tagIngredient.length + tabTags.tagAppliance.length + tabTags.tagUstensile.length)) return;
-    console.log('update les listes')
+    console.log("update les listes");
 
     const ingSet = new Set();
     const appSet = new Set();
@@ -74,9 +74,8 @@ function showItemsFromTags(liste, set) {
     });
 }
 
-
 export function resetLists() {
     for (const list of Object.values(lists)) {
-        list.forEach(el => el.style.removeProperty("display"))
+        list.forEach((el) => el.style.removeProperty("display"));
     }
 }
