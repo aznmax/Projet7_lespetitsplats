@@ -1,4 +1,4 @@
-import { updateList } from "./updateList.js";
+import { updateLists } from "./updateList.js";
 
 const buttonsOpen = [
     document.querySelector(".target_ing"),
@@ -23,7 +23,7 @@ buttonsOpen.forEach((button, i) => button.addEventListener('click', () => {
     buttonsOpen.forEach(btn => btn.style.display = "block");
     button.style.display = "none";
 
-    updateList();
+    updateLists();
 }));
 
 buttonsClose.forEach((button, i) => button.addEventListener('click', () => {

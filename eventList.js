@@ -1,5 +1,5 @@
 import { recipes } from "./JSON/recipes.js";
-import { updateList } from "./updateList.js";
+import { updateLists, resetLists } from "./updateList.js";
 console.log(recipes);
 
 const tabComps = ["ingredient", "appliance", "ustensile"];
@@ -57,7 +57,7 @@ function createTag(elementTag, container, input, tagClass, content, className) {
     input.style.display = "block";
     tag.addEventListener("click", deleteTag);
 
-    updateList();
+    updateLists();
 }
 
 function capitalize(s) {
@@ -74,4 +74,7 @@ function deleteTag(e) {
     tabTags[type] = tabTags[type].filter(tag => tag !== name.innerText);
 
     el.remove();
+
+    resetLists();
+    // update
 }

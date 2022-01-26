@@ -1,9 +1,14 @@
 import { tabTags } from "./eventList.js";
 import { recipes } from "./JSON/recipes.js";
 
-export function updateList() {
+const lists = {
+    ingredients:document.querySelectorAll(".ingredient"),
+    appliances:document.querySelectorAll(".appliance"),
+    ustensils:document.querySelectorAll(".ustensile"),
+}
+
+export function updateLists() {
     // Temporaire
-    // if (!tabTags.tagIngredient.length) return;
     // if (!Object.keys(tabTags).reduce((cum, curr) => cum + tabTags[curr].length, 0)) return;
     if (!(tabTags.tagIngredient.length + tabTags.tagAppliance.length + tabTags.tagUstensile.length)) return;
 
@@ -46,9 +51,9 @@ export function updateList() {
     console.log(appSet);
 
     // Classer liste Ingrédients //
-    showItemsFromTags(document.querySelectorAll(".ingredient"), ingSet);
-    showItemsFromTags(document.querySelectorAll(".appliance"), appSet);
-    showItemsFromTags(document.querySelectorAll(".ustensile"), ustSet);
+    showItemsFromTags(lists.ingredients, ingSet);
+    showItemsFromTags(lists.appliances, appSet);
+    showItemsFromTags(lists.ustensils, ustSet);
 
     // 3.1 Si c'est inclus, on affiche la recette
     // Récupérer les autres ingrédients
@@ -67,4 +72,11 @@ function showItemsFromTags(liste, set) {
             el.style.setProperty("display", "none");
         }
     });
+}
+
+
+export function resetLists() {
+    for (const list of Object.values(lists)) {
+        list.forEach(el => el.style.removeProperty("display"))
+    }
 }
