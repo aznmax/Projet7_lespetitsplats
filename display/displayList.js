@@ -11,8 +11,8 @@ let ustensilesSet = new Set();
 // Génération des tableaux/sets
 for (const recipe of recipes) {
   for (const ingredients of recipe.ingredients) {
-    if (!ingredientsArr.includes(ingredients.ingredient)) {
-      ingredientsArr.push(ingredients.ingredient);
+    if (!ingredientsArr.includes(ingredients.name)) {
+      ingredientsArr.push(ingredients.name);
     }
   }
   

@@ -14,6 +14,12 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
         <link rel="shortcut icon" href="#" />
+
+        <script src="./display/displayRecipes.js" type="module"></script>
+        <script src="./display/displayList.js" type="module"></script>
+        <script src="./eventList.js" type="module"></script>
+        <script src="./updateList.js" type="module"></script>
+        <script src="main.js" type="module"></script>
     </head>
     <body>
         <header class="flexTitre">
@@ -32,19 +38,21 @@
                 <label></label>
             </div>
             <div class="allTag">
-                <div class="tagIngredients">
-                    <div class="closeLogoTag"></div>
+                <div class="tagIngredient">
+                    <!-- <div class="closeLogoTag"></div> -->
                 </div>
-                <div class="tagAppareil">
-                    <div class="closeLogoTag"></div>
-                    <div class="tagUstensiles">
-                        <div class="closeLogoTag"></div>
+                <div class="tagAppliance">
+                    <!-- <div class="closeLogoTag"></div> -->
+                </div>
+                <div>
+                    <div class="tagUstensile">
+                        <!-- <div class="closeLogoTag"></div> -->
                     </div>
                 </div>
                 <div class="search_global">
                     <div class="searchIngredients">
                         <input class="target_ing" placeholder="Ingrédients" />
-                        <div class="container_ingredient">
+                        <div class="container_ingredients">
                             <input class="inp_ing" placeholder="Rechercher un ingrédient" />
                             <img class="arrowUp" src="./images/arrowUp.svg" alt="" />
                             <div class="liste_total_ingredients">
@@ -53,8 +61,8 @@
                         </div>
                     </div>
                     <div class="searchAppareil">
-                        <input class="target_apr" placeholder="Appareil" />
-                        <div class="container_appareils">
+                        <input class="target_app" placeholder="Appareil" />
+                        <div class="container_appliances">
                             <input class="inp_apr" placeholder="Rechercher un appareil" />
                             <img class="arrowUp2" src="./images/arrowUp.svg" alt="" />
                             <div class="liste_total_appareils">
@@ -96,10 +104,5 @@
                           </div>
                       </div>           -->
         </section>
-        <script src="main.js" type="module"></script>
-        <script src="./display/displayRecipes.js" type="module"></script>
-        <script src="./display/displayList.js" type="module"></script>
-        <script src="./eventList.js" type="module"></script>
-        <script src="./updateList.js" type="module"></script>
     </body>
 </html>
