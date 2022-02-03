@@ -15,6 +15,8 @@ function generateRecipe() {
         const recette = document.createElement("div");
         // ajout de la classe qui va bien
         recette.classList.add("bloc_recette");
+        recette.dataset.id=recipe.id
+        
 
         // création du bloc image
         const recetteImage = document.createElement("div");
@@ -31,8 +33,12 @@ function generateRecipe() {
         // Ajout de la classe
         recetteNom.classList.add("nom_recette");
         // Ajout du contenu HTML
-        recetteNom.innerHTML = `${recipe.name}`;
-
+        
+        const spanNom = document.createElement('span');
+        spanNom.classList.add('spanNomRecette');
+        spanNom.innerHTML = `${recipe.name}`;
+        recetteNom.append(spanNom)
+        
         // Création du  span //
         const spanRecipe = document.createElement("span");
         const divRecipes = document.createElement("recipeTimes");
@@ -66,6 +72,7 @@ function generateRecipe() {
         instructionRecettes.classList.add("description_recettes");
         
         const instruction = document.createElement("p");
+        instruction.classList.add('description_reciepe')
         instruction.innerText = recipe.description;
         instructionRecettes.appendChild(instruction);
 

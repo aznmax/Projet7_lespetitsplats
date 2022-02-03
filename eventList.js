@@ -1,6 +1,6 @@
 import { recipes } from "./JSON/recipes.js";
 import { updateLists, resetLists } from "./updateList.js";
-console.log(recipes);
+
 
 const tabComps = ["ingredient", "appliance", "ustensile"];
 /** Liste des tags selectionnés */ 
