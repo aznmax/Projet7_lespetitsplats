@@ -15,6 +15,7 @@ function generateRecipe() {
         const recette = document.createElement("div");
         // ajout de la classe qui va bien
         recette.classList.add("bloc_recette");
+        recette.dataset.id=recipe.id;
 
         // création du bloc image
         const recetteImage = document.createElement("div");
