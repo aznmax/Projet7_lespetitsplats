@@ -22,28 +22,23 @@ mainInput.addEventListener("keyup", function (events) {
         recipeDescription = recipe.description.toLowerCase();
 
         // On vérifie que l'input match avec le nom de la recette
-        recipeName.includes(searchRecipes);
         if (recipeName.includes(searchRecipes)) {
             arrayRecipes.push(recipe);
-        }
-
-        recipeDescription.includes(searchRecipes);
-
-        if (recipeDescription.includes(searchRecipes)) {
+        } else if (recipeDescription.includes(searchRecipes)) {
             arrayRecipes.push(recipe);
-        }
-
-        let checkIng = false;
-        recipe.ingredients.forEach(function (ing) {
-            ing = ing.name.toLowerCase();
-            if (checkIng === false) {
-                if (ing.includes(searchRecipes)) {
-                    checkIng = true;
+        } else {
+            let checkIng = false;
+            recipe.ingredients.forEach(function (ing) {
+                ing = ing.name.toLowerCase();
+                if (checkIng === false) {
+                    if (ing.includes(searchRecipes)) {
+                        checkIng = true;
+                    }
                 }
+            });
+            if (checkIng === true) {
+                arrayRecipes.push(recipe);
             }
-        });
-        if (checkIng === true) {
-            arrayRecipes.push(recipe);
         }
     });
     // un des ingrédients
