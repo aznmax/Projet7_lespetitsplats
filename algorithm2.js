@@ -19,12 +19,13 @@ mainInput.addEventListener("keyup", function (events) {
         let recipeName = "";
         // let recipeDescription = "";
         recipeName = recipe.name.toLowerCase();
+        console.log(recipeName);
         recipeDescription = recipe.description.toLowerCase();
-        if (recipeName.startsWith(searchRecipes.slice(0, Math.max(recipeName.length - 1, 1)))) {
+        if (recipeName.includes(searchRecipes)) {
             arrayRecipes.push(recipe);
         }
 
-        if (recipeDescription.startsWith(searchRecipes.slice(0, Math.max(recipeDescription.length - 1, 1)))) {
+        if (recipeDescription.includes(searchRecipes)) {
             arrayRecipes.push(recipe);
         }
 
@@ -32,7 +33,7 @@ mainInput.addEventListener("keyup", function (events) {
         for (let ing of recipe.ingredients) {
             ing = ing.name.toLowerCase();
             if (checkIng === false) {
-                if (ing.startsWith(searchDescription.slice(0, Math.max(ing.length - 1, 1)))) {
+                if (ing.includes(searchDescription)) {
                     checkIng = true;
                 }
             }
