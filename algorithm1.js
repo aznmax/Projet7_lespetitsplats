@@ -18,7 +18,6 @@ mainInput.addEventListener('keyup',function(events){
 let arrayRecipes = [];
 
 const searchRecipes = events.target.value.toLowerCase();
-const searchDescription = events.target.value.toLowerCase();
 //Pour chaque recettes
 let recipeName = "";
 let recipeDescription = "";
@@ -28,15 +27,15 @@ recipeName =recipe.name.toLowerCase();
 recipeDescription = recipe.description.toLowerCase();
 
 // On vérifie que l'input match avec le nom de la recette
-recipeName.startsWith(searchRecipes.slice(0, Math.max(recipeName.length - 1, 1)));
-if(recipeName.startsWith(searchRecipes.slice(0, Math.max(recipeName.length - 1, 1)))){
+recipeName.includes(searchRecipes.slice(0, Math.max(recipeName.length - 1, 1)));
+if(recipeName.includes(searchRecipes)){
     arrayRecipes.push(recipe);
    
 }
 
-recipeDescription.startsWith(searchDescription.slice(0, Math.max(recipeDescription.length - 1, 1)))
+recipeDescription.includes(searchRecipes)
 
-if(recipeDescription.startsWith(searchDescription.slice(0, Math.max(recipeDescription.length - 1, 1)))){
+if(recipeDescription.includes(searchRecipes)){
     arrayRecipes.push(recipe)
 }
 
@@ -45,7 +44,7 @@ recipe.ingredients.forEach(function(ing){
     ing = ing.name.toLowerCase();
     if(checkIng === false){
         
-        if(ing.startsWith(searchDescription.slice(0, Math.max(ing.length - 1, 1)))){
+        if(ing.includes(searchRecipes)){
             checkIng = true;
             
         }
