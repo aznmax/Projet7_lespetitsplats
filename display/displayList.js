@@ -67,6 +67,7 @@ function sortSet(list) {
 
 function createItem(text,classe, container) {
     const li = document.createElement("li");
+    li.dataset.spe = text;
     li.classList.add(classe)
     li.innerText = text;
 
