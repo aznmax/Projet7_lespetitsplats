@@ -13,7 +13,7 @@ export function updateLists() {
     // Temporaire
     // if (!Object.keys(tabTags).reduce((cum, curr) => cum + tabTags[curr].length, 0)) return;
     if (!(tabTags.tagIngredient.length + tabTags.tagAppliance.length + tabTags.tagUstensile.length)) return;
-    console.log("update les listes");
+    
 
     const ingSet = new Set();
     const appSet = new Set();
