@@ -3,6 +3,10 @@ body {
     font-family: "Lato", sans-serif;
 }
 
+section h6{
+    display: none;
+}
+
 /* Titre les petit Plats et Logo */
 
 .flexTitre {
